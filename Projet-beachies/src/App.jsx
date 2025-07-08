@@ -9,6 +9,7 @@ import Tournees from "./pages/Tournees";
 import TheBeaches from "./pages/TheBeaches";
 import Musique from "./pages/Musique";
 import Boutiques from "./pages/Boutiques";
+import Page404 from "./pages/Page404";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/the-beaches" element={<TheBeaches />} />
         <Route path="/musique" element={<Musique />} />
         <Route path="/boutiques" element={<Boutiques />} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
 
       <Footer />
