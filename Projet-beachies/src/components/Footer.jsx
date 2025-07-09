@@ -22,7 +22,7 @@ const Footer = () => {
 
         <div className="max-w-4xl mx-auto px-1">
           {/* Liens du footer */}
-          <div className="flex justify-center items-center gap-23 mb-20 flex-wrap">
+          <div className="flex flex-col md:flex-row justify-center items-center md:gap-23 gap-6 mb-8 md:mb-20 text-center md:text-left">
             <a 
               href="#" 
               className="text-gray-800 text-sm font-bold tracking-wider uppercase hover:text-gray-600 transition-colors duration-300"
@@ -50,11 +50,11 @@ const Footer = () => {
           </div>
 
           {/* Section réseaux sociaux */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-10 md:mb-12 flex flex-col items-center">
             <h3 className="text-gray-800 text-base font-bold mb-5 tracking-wide uppercase">
               NOS RÉSEAUX
             </h3>
-            <div className="flex justify-center gap-5">
+            <div className="flex flex-row justify-center gap-7 md:gap-5 mb-4 items-center">
               {/* TikTok */}
               <a 
                 href="#" 
@@ -102,36 +102,36 @@ const Footer = () => {
           </div>
 
           {/* Section newsletter */}
-          <div className="border-t border-gray-200 pt-15 ml-2 max-w-2xl mx-auto">
-            <h4 className="text-sm font-bold text-gray-800 mb-4 uppercase tracking-wide">
+          <div className="border-t border-gray-200 pt-10 md:pt-15 ml-0 md:ml-2 max-w-2xl mx-auto flex flex-col md:block items-center md:items-start">
+            <h4 className="text-base font-bold text-gray-800 mb-4 uppercase tracking-wide text-center md:text-left">
               NEWSLETTER
             </h4>
-            <p className="text-xs text-gray-600 mb-5 leading-relaxed text-justify">
-            En cochant cette case, j’accepte de recevoir ponctuellement par e-mail les actualités de 
+            <p className="text-xs text-gray-600 mb-5 leading-relaxed text-center md:text-justify md:text-left">
+            En cochant cette case, j'accepte de recevoir ponctuellement par e-mail les actualités de 
             The Beaches : nouveautés, événements à venir et contenus exclusifs. Mes données resteront confidentielles et ne seront jamais partagées en dehors de The Beaches.
             </p>
-            <div className="flex gap-4 items-center">
+            <form className="w-full flex flex-col md:flex-row gap-3 items-center md:items-end" onSubmit={handleSubmit}>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Votre email"
-                className="flex-1 px-4 py-3 border border-gray-300 rounded bg-gray-50 text-sm focus:outline-none focus:border-gray-800 focus:bg-white transition-colors"
+                className="w-full md:w-auto px-4 py-3 border border-gray-300 rounded bg-gray-50 text-sm focus:outline-none focus:border-gray-800 focus:bg-white transition-colors"
                 required
               />
-              <button
-                onClick={handleSubmit}
-                className="bg-gray-800 text-white px-5 py-3 rounded text-xs font-medium uppercase tracking-wide hover:bg-gray-700 transition-colors duration-300"
-              >
+              <div className="flex flex-col sm:flex-row gap-2 w-full md:w-auto items-center justify-center md:justify-start mt-2 md:mt-0">
+                <label className="flex items-center text-xs">
+                  <input type="checkbox" className="mr-2" required />
                 J'accepte
-              </button>
+                </label>
               <button
-                onClick={handleUnsubscribe}
-                className="bg-transparent text-gray-600 border border-gray-300 px-5 py-3 rounded text-xs font-medium uppercase tracking-wide hover:bg-gray-50 hover:text-gray-800 transition-colors duration-300"
+                  type="submit"
+                  className="bg-blue-200 text-blue-900 px-4 py-2 rounded text-xs font-medium uppercase tracking-wide hover:bg-blue-300 transition-colors duration-300"
               >
-                s'inscrire
+                  S'inscrire
               </button>
             </div>
+            </form>
           </div>
         </div>
       </footer>

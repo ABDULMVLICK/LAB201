@@ -13,7 +13,7 @@ const Boutiques = () => {
     }}
 
     >
-      <h1 className="text-4xl text-white font-bold">Boutiques</h1>
+      <h1 className="text-4xl text-white font-bold animate-fadein">Boutiques</h1>
     </section>
   );
 };

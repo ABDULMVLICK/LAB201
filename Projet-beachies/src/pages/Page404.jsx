@@ -13,7 +13,7 @@ const Page404 = () => {
     }}
 
     >
-      <h1 className="text-4xl text-white font-bold">404 - Page not found</h1>
+      <h1 className="text-4xl text-white font-bold animate-fadein">404 - Page not found</h1>
     </section>
   );
 };

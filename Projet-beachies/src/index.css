@@ -1,1 +1,30 @@
 @import "tailwindcss";
+@keyframes wave {
+  0% { transform: translateY(0) rotate(0deg); }
+  10% { transform: translateY(-2px) rotate(-0.5deg); }
+  20% { transform: translateY(2px) rotate(0.5deg); }
+  30% { transform: translateY(-1.5px) rotate(-0.7deg); }
+  40% { transform: translateY(1.5px) rotate(0.7deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  60% { transform: translateY(-2px) rotate(0.5deg); }
+  70% { transform: translateY(2px) rotate(-0.5deg); }
+  80% { transform: translateY(-1.5px) rotate(0.7deg); }
+  90% { transform: translateY(1.5px) rotate(-0.7deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+.animate-wave {
+  animation: wave 2.5s infinite linear;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadein {
+  animation: fadein 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
