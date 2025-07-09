@@ -41,7 +41,7 @@ const TheBeaches = () => {
         <img
           src={papierDechire}
           alt="Effet papier déchiré"
-          className="absolute w-full md:w-[1000vh] h-250 sm:h-90 md:h-[1050px] object-cover -mt-30 md:-mt-32 select-none pointer-events-none z-0"
+          className="absolute w-full md:w-[1000vh] h-250 sm:h-90 md:h-[1050px] object-cover -mt-30 md:-mt-32 select-none pointer-events-none z-0 animate-paper-wave"
         />
         <div className="relative z-10 flex flex-col md:flex-row gap-6 md:gap-20 mt-10 md:mt-25 items-center md:items-start m-4 md:m-30 w-full">
           <div className="flex flex-col items-center md:block w-full md:w-auto order-2 md:order-1">
