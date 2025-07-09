@@ -19,10 +19,10 @@ const Navbar = ({ onMenuOpenChange }) => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full text-black z-40 transition-all duration-700 ease-out ${show ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
+    <nav className={`fixed top-0 left-0 w-full mt-[-2] text-black z-40 transition-all duration-700 ease-out ${show ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
       {/* Navbar desktop */}
       <div
-        className="hidden md:flex w-full h-40 items-center space-x-90  justify-center px-10 relative"
+        className="hidden md:flex w-full h-40 items-center space-x-90  justify-center px-10 relative animate-paper-wave"
         style={{
           backgroundImage: `url(${papierDechire})`,
           backgroundSize: 'auto 230%',
