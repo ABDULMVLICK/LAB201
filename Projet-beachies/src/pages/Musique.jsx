@@ -1,17 +1,20 @@
 import React from "react";
 import fondgrain from "../images/Fond_grains.jpg"
 import lateshow from "../images/lateShow.jpg"
+import album2 from "../images/album2.jpg"
+import album3 from "../images/album3.png"
+import ep1 from "../images/ep1.jpg"
+import ep2 from "../images/ep2.jpg"
+import ep3 from "../images/ep3.jpg"
 const Musique = () => {
   return (
-    <section className="min-h-screen flex pt-50 pl-30 pb-50 "
-    
+    <section className="min-h-screen flex pt-50 pl-30 pb-50 font-bebas"
     style={{
       backgroundImage: `url(${fondgrain})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center bottom',
       backgroundRepeat: 'no-repeat'
     }}
-    
     >
       
 
@@ -37,7 +40,7 @@ const Musique = () => {
 
               <div className="flex flex-col md:relative md:w-[300px] md:h-[300px] md:flex-shrink-0 md:group items-center">
                 <div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] flex-shrink-0 group">
-                  <img src={lateshow} alt="album2" className="w-full h-full object-cover select-none pointer-events-none" />
+                  <img src={album2} alt="album2" className="w-full h-full object-cover select-none pointer-events-none" />
                   <div className="hidden md:block absolute inset-0 bg-white/1 backdrop-blur-sm opacity-100 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none z-10"></div>
                   <h2 className="hidden md:block absolute bottom-[20px] right-[-70px] text-white font-extrabold text-5xl text-right drop-shadow-lg uppercase pointer-events-none z-20 break-words">
                     BLAME <br /> MY EX
@@ -50,7 +53,7 @@ const Musique = () => {
 
               <div className="flex flex-col md:relative md:w-[300px] md:h-[300px] md:flex-shrink-0 md:group items-center">
                 <div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] flex-shrink-0 group">
-                  <img src={lateshow} alt="album3" className="w-full h-full object-cover select-none pointer-events-none" />
+                  <img src={album3} alt="album3" className="w-full h-full object-cover select-none pointer-events-none" />
                   <div className="hidden md:block absolute inset-0 bg-white/1 backdrop-blur-sm opacity-100 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none z-10"></div>
                   <h2 className="hidden md:block absolute bottom-[20px] right-[-70px] text-white font-extrabold text-5xl text-right drop-shadow-lg uppercase pointer-events-none z-20 break-words">
                     NO HARD <br /> FEELINGS
@@ -74,40 +77,40 @@ const Musique = () => {
 
               <div className="flex flex-col md:relative md:w-[300px] md:h-[300px] md:flex-shrink-0 md:group items-center">
                 <div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] flex-shrink-0 group">
-                  <img src={lateshow} alt="ep1" className="w-full h-full object-cover select-none pointer-events-none" />
+                  <img src={ep1} alt="ep1" className="w-full h-full object-cover select-none pointer-events-none" />
                   <div className="hidden md:block absolute inset-0 bg-white/1 backdrop-blur-sm opacity-100 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none z-10"></div>
                   <h2 className="hidden md:block absolute bottom-[20px] right-[-70px] text-white font-extrabold text-5xl text-right drop-shadow-lg uppercase pointer-events-none z-20 break-words">
-                    LATE <br /> SHOW
+                    HEIGHTS
                   </h2>
                 </div>
                 <h2 className="block md:hidden mt-2 text-black font-extrabold text-2xl text-center uppercase pointer-events-none break-words">
-                  LATE SHOW
+                  HEIGHTS
                 </h2>
               </div>
 
               <div className="flex flex-col md:relative md:w-[300px] md:h-[300px] md:flex-shrink-0 md:group items-center">
                 <div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] flex-shrink-0 group">
-                  <img src={lateshow} alt="ep2" className="w-full h-full object-cover select-none pointer-events-none" />
+                  <img src={ep2} alt="ep2" className="w-full h-full object-cover select-none pointer-events-none" />
                   <div className="hidden md:block absolute inset-0 bg-white/1 backdrop-blur-sm opacity-100 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none z-10"></div>
                   <h2 className="hidden md:block absolute bottom-[20px] right-[-70px] text-white font-extrabold text-5xl text-right drop-shadow-lg uppercase pointer-events-none z-20 break-words">
-                    LATE <br /> SHOW
+                    THE <br /> PROFESSIONAL
                   </h2>
                 </div>
                 <h2 className="block md:hidden mt-2 text-black font-extrabold text-2xl text-center uppercase pointer-events-none break-words">
-                  LATE SHOW
+                  THE PROFESSIONAL
                 </h2>
               </div>
 
               <div className="flex flex-col md:relative md:w-[300px] md:h-[300px] md:flex-shrink-0 md:group items-center">
                 <div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] flex-shrink-0 group">
-                  <img src={lateshow} alt="ep3" className="w-full h-full object-cover select-none pointer-events-none" />
+                  <img src={ep3} alt="ep3" className="w-full h-full object-cover select-none pointer-events-none" />
                   <div className="hidden md:block absolute inset-0 bg-white/1 backdrop-blur-sm opacity-100 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none z-10"></div>
                   <h2 className="hidden md:block absolute bottom-[20px] right-[-70px] text-white font-extrabold text-5xl text-right drop-shadow-lg uppercase pointer-events-none z-20 break-words">
-                    LATE <br /> SHOW
+                    FUTURE <br /> LOVERS
                   </h2>
                 </div>
                 <h2 className="block md:hidden mt-2 text-black font-extrabold text-2xl text-center uppercase pointer-events-none break-words">
-                  LATE SHOW
+                  FUTURE LOVERS
                 </h2>
               </div>
 

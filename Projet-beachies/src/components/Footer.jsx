@@ -15,7 +15,7 @@ const Footer = () => {
   };
 
   return (
-    <div  className="bg-[#4F7688] py-16">
+    <div  className="bg-[#4F7688] py-16 font-oswald">
       <footer className="bg-[#4F7688]  relative  pt-20 pb-10 max-w-6xl mx-auto ">
         
        

@@ -28,3 +28,31 @@
 .animate-fadein {
   animation: fadein 0.8s cubic-bezier(0.4,0,0.2,1) both;
 }
+@font-face {
+  font-family: 'Thunderhouse Pro';
+  src: url('./assets/fonts/ThunderhousePro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.font-thunderhousepro {
+  font-family: 'Thunderhouse Pro', sans-serif;
+}
+@font-face {
+  font-family: 'Nono45 Headline Bold';
+  src: url('./assets/fonts/Nono45HeadlineBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+.font-nono45 {
+  font-family: 'Nono45 Headline Bold', sans-serif;
+  font-weight: bold;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&display=swap');
+
+.font-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+}
+.font-oswald {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-weight: 700;
+}
