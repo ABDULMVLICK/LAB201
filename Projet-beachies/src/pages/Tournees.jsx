@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import fondgrain from "../images/Fond_grains.jpg";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
@@ -26,6 +27,7 @@ function formatConcertDate(dateStr) {
 
 const Tournees = () => {
   const [concerts, setConcerts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchConcerts = async () => {
@@ -43,6 +45,10 @@ const Tournees = () => {
 
     fetchConcerts();
   }, []);
+
+  const handleTicketsClick = () => {
+    navigate('/404');
+  };
 
   return (
     <section
@@ -79,14 +85,12 @@ const Tournees = () => {
                     {concert.soldOut ? (
                       <span className="bg-blue-200 text-blue-900 font-bold rounded-full px-5 py-1 text-xs sm:text-base shadow-md">WAITLIST</span>
                     ) : (
-                      <a
-                        href={concert.ticketsUrl || '#'}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-blue-200 text-blue-900 font-bold rounded-full px-5 py-1 text-xs sm:text-base shadow-md hover:bg-blue-300 transition"
+                      <button
+                        onClick={handleTicketsClick}
+                        className="bg-blue-200 text-blue-900 font-bold rounded-full px-5 py-1 text-xs sm:text-base shadow-md hover:bg-blue-300 transition cursor-pointer"
                       >
                         TICKETS
-                      </a>
+                      </button>
                     )}
                   </div>
                 </div>
