@@ -6,23 +6,23 @@ import { db } from "../firebase";
 
 // Helper pour formater la date
 function formatConcertDate(dateStr) {
-  // On suppose dateStr au format YYYY-MM-DD ou similaire
+  // On suppose dateStr au format YYYY-MM-DD
   const months = [
-    "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
-    "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"
+    "JANVIER", "FÉVRIER", "MARS", "AVRIL", "MAI", "JUIN",
+    "JUILLET", "AOÛT", "SEPTEMBRE", "OCTOBRE", "NOVEMBRE", "DÉCEMBRE"
   ];
+
   const d = new Date(dateStr);
   if (isNaN(d)) return dateStr;
+
   const day = d.getDate();
   const year = d.getFullYear();
   const month = months[d.getMonth()];
-  // Suffixe anglais
-  const j = day % 10, k = day % 100;
-  let suffix = "th";
-  if (j === 1 && k !== 11) suffix = "st";
-  else if (j === 2 && k !== 12) suffix = "nd";
-  else if (j === 3 && k !== 13) suffix = "rd";
-  return `${month} ${day}${suffix} ${year}`;
+  
+  // Suffixe français : "1er" seulement pour le premier jour
+  const dayStr = (day === 1) ? "1er" : day;
+
+  return `${dayStr} ${month} ${year}`;
 }
 
 const Tournees = () => {
@@ -47,7 +47,7 @@ const Tournees = () => {
   }, []);
 
   const handleTicketsClick = () => {
-    navigate('/404');
+    window.open('https://shotgun.live/fr', '_blank');
   };
 
   return (
@@ -78,7 +78,7 @@ const Tournees = () => {
                     {concert.location ? ` — ${concert.location}` : ""}
                     {concert.city ? ` — ${concert.city}` : ""}
                     {concert.country ? `, ${concert.country}` : ""}
-                    {concert.soldOut ? " — WAITLIST" : ""}
+                    {concert.soldOut ? " — SOLDOUT" : ""}
                   </span>
                   <div className="w-full border-b-2 border-black my-2"></div>
                   <div className="flex justify-end">
