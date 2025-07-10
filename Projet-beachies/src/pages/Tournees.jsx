@@ -83,7 +83,7 @@ const Tournees = () => {
                   <div className="w-full border-b-2 border-black my-2"></div>
                   <div className="flex justify-end">
                     {concert.soldOut ? (
-                      <span className="bg-blue-200 text-blue-900 font-bold rounded-full px-5 py-1 text-xs sm:text-base shadow-md">WAITLIST</span>
+                      <span className="bg-blue-200 text-blue-900 font-bold rounded-full px-5 py-1 text-xs sm:text-base shadow-md">SOLDOUT</span>
                     ) : (
                       <button
                         onClick={handleTicketsClick}

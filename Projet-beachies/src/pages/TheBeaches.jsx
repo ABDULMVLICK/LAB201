@@ -14,7 +14,7 @@ const TheBeaches = () => {
       className="relative z-10 min-h-screen flex items-center justify-center pt-10 flex-col md:flex-row md:items-center md:justify-center"
       style={{
         backgroundImage: `url(${fond})`,
-        backgroundSize: 'cover',
+        backgroundSize: 'auto 90%',
         backgroundPosition: 'center bottom',
         backgroundRepeat: 'no-repeat',
       }}
